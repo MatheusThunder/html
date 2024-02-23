@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+    const carrossel = document.querySelector('.carrossel');
+    let slideIndex = 0;
+
+    function nextSlide() {
+        if (slideIndex < carrossel.children.length - 1) {
+            slideIndex++;
+        } else {
+            slideIndex = 0;
+        }
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        if (slideIndex > 0) {
+            slideIndex--;
+        } else {
+            slideIndex = carrossel.children.length - 1;
+        }
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        const translateValue = -slideIndex * 100 + '%';
+        carrossel.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    setInterval(nextSlide, 3000); // Troca de slide a cada 2 segundos (ajuste conforme necessário)
+});
+</script>
+	<title>Apresentação</title>
+</head>
+<body>
+	<div id="subtitulo">
+	</div>
+		<div id="titulo">
+		<img src="C:\aula-html-main\HTML\Imagens Site 2\Emporio.png">
+		<div id="submenu">
+		</div>
+		<ul id="menu">
+			<ul>
+			<li class="home"><a href="index.html">Home</a></li>
+			<li><a href="apresentação.html">Apresentação</a></li>
+			<li><a href="cardápio.html">Cardápio</a></li>
+			<li><a href="contato.html">Contato</a></li>
+			<li><a href="Endereço.html">Endereço</a></li>
+			<li><a href="horario.html">Horário</a></li>
+			<li><a href="pagamento.html">Pagamento</a></li>
+            <li><a href="funcionario.html">funcionarios</a></li>
+		</ul>
+
+	</div>
+		
+	</div>
+ <div id="página">
+ 	<h1>Apresentação</h1>
+    <p>
+        <ul>
+
+        <li>AQUI FAZEMOS OS MELHORES LANCHES DO SEU GOSTO</li>
+
+        </ul>
+    </p>
+ 	<div class="carrossel-container">
+        <div class="carrossel">
+            <img src="C:\aula-html-main\HTML\Imagens Site 2\S1.jpg" alt="S1">
+            <img src="C:\aula-html-main\HTML\Imagens Site 2\S2.jpg" alt="S2">
+        
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+ 	
+  <br>
+
+</div>
+</body>
+</html>
